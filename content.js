@@ -8,7 +8,8 @@ function onAccessApproved(screenStream, includeAudio) {
   combinedStream.addTrack(screenStream.getVideoTracks()[0]);
 
   if (includeAudio) {
-    navigator.mediaDevices.getUserMedia({ audio: true })
+    navigator.mediaDevices
+      .getUserMedia({ audio: true })
       .then((micStream) => {
         combinedStream.addTrack(micStream.getAudioTracks()[0]);
         recorder = new MediaRecorder(combinedStream);
@@ -35,7 +36,7 @@ function onAccessApproved(screenStream, includeAudio) {
           formData.append("video", file);
 
           sendVideoToServer(formData);
-          recordedChunks.length = 0; 
+          recordedChunks.length = 0;
         };
 
         recorder.start();
@@ -67,7 +68,7 @@ function onAccessApproved(screenStream, includeAudio) {
       formData.append("video", file);
 
       sendVideoToServer(formData);
-      recordedChunks.length = 0; 
+      recordedChunks.length = 0;
     };
 
     recorder.start();
@@ -75,7 +76,7 @@ function onAccessApproved(screenStream, includeAudio) {
 }
 
 function sendVideoToServer(formData) {
-  fetch("https://chrome-extension-backend-w4r6.onrender.com/extension/", {
+  fetch("https://transcription-5mz1.onrender.com/upload-video", {
     method: "POST",
     body: formData,
   })

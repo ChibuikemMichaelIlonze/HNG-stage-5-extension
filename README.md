@@ -12,7 +12,7 @@ git clone https://github.com/ChibuikemMichaelIlonze/HNG-stage-5-extension.git
 Open Google Chrome.
 
 Click on the three dots in the top-right corner to open the menu.
-
+q
 Go to "Extensions."
 
 Enable "Developer mode" in the top-right corner.

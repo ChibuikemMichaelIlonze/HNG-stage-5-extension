@@ -6,7 +6,7 @@ Description: This Chrome extension simplifies the HNG Internship Stage 5 process
 
 Installation
 Clone the repository to your local machine:
-
+1
 Copy code
 git clone https://github.com/ChibuikemMichaelIlonze/HNG-stage-5-extension.git
 Open Google Chrome.
